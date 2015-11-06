@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5BE5F307-5290-45E5-8D6C-1E2E909EDBDC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Olan</RootNamespace>
+    <AssemblyName>Olan</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <DontImportPostSharp>True</DontImportPostSharp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="PresentationFramework.Aero2" />
+    <Reference Include="PresentationFramework.AeroLite" />
+    <Reference Include="PresentationFramework.Classic" />
+    <Reference Include="PresentationFramework.Luna" />
+    <Reference Include="PresentationFramework.Royale" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.Composition.Registration" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UI\FlagsEnumValueConverter.cs" />
+    <Compile Include="UI\ConfigurablePropertyAttribute.cs" />
+    <Compile Include="JsonExtensions.cs" />
+    <Compile Include="TaskCompletionOptions.cs" />
+    <Compile Include="AsyncEx\AsyncAutoResetEvent.cs" />
+    <Compile Include="AsyncEx\AsyncBarrier.cs" />
+    <Compile Include="AsyncEx\AsyncCollection.cs" />
+    <Compile Include="AsyncEx\AsyncConditionVariable.cs" />
+    <Compile Include="AsyncEx\AsyncContext.cs" />
+    <Compile Include="AsyncEx\AsyncContext.SynchronizationContext.cs" />
+    <Compile Include="AsyncEx\AsyncContext.TaskQueue.cs" />
+    <Compile Include="AsyncEx\AsyncContext.TaskScheduler.cs" />
+    <Compile Include="AsyncEx\AsyncContextThread.cs" />
+    <Compile Include="AsyncEx\AsyncCountdownEvent.cs" />
+    <Compile Include="AsyncEx\AsyncFactory %28of TResult%29.cs" />
+    <Compile Include="AsyncEx\AsyncFactory %28of TResult%29.FromAsync.cs" />
+    <Compile Include="AsyncEx\AsyncFactory.cs" />
+    <Compile Include="AsyncEx\AsyncFactory.FromAsync.cs" />
+    <Compile Include="AsyncEx\AsyncLazy.cs" />
+    <Compile Include="AsyncEx\AsyncLock.cs" />
+    <Compile Include="AsyncEx\AsyncManualResetEvent.cs" />
+    <Compile Include="AsyncEx\AsyncMonitor.cs" />
+    <Compile Include="AsyncEx\AsyncProducerConsumerQueue.cs" />
+    <Compile Include="AsyncEx\AsyncReaderWriterLock.cs" />
+    <Compile Include="AsyncEx\AsyncSemaphore.cs" />
+    <Compile Include="AsyncEx\AsyncWaitQueue.cs" />
+    <Compile Include="AsyncEx\AwaitableDisposable.cs" />
+    <Compile Include="AsyncEx\CancellationTokenExtensions.cs" />
+    <Compile Include="AsyncEx\CancellationTokenHelpers.cs" />
+    <Compile Include="AsyncEx\DeferralManager.cs" />
+    <Compile Include="AsyncEx\Deque.cs" />
+    <Compile Include="AsyncEx\ExceptionHelpers.cs" />
+    <Compile Include="AsyncEx\Internal\IdManager.cs" />
+    <Compile Include="AsyncEx\Internal\PlatformEnlightenment\AsyncEnlightenment.cs" />
+    <Compile Include="AsyncEx\Internal\PlatformEnlightenment\BlockingQueue.cs" />
+    <Compile Include="AsyncEx\Internal\PlatformEnlightenment\ExceptionEnlightenment.cs" />
+    <Compile Include="AsyncEx\Internal\PlatformEnlightenment\Lazy.cs" />
+    <Compile Include="AsyncEx\Internal\PlatformEnlightenment\SingleThreadedApartmentThread.cs" />
+    <Compile Include="AsyncEx\Internal\PlatformEnlightenment\SynchronizationContextEnlightenment.cs" />
+    <Compile Include="AsyncEx\Internal\PlatformEnlightenment\ThreadPoolEnlightenment.cs" />
+    <Compile Include="AsyncEx\Internal\ReflectionShim.cs" />
+    <Compile Include="AsyncEx\Internal\TaskShim.cs" />
+    <Compile Include="AsyncEx\NormalizedCancellationToken.cs" />
+    <Compile Include="AsyncEx\NotifyTaskCompletion.cs" />
+    <Compile Include="AsyncEx\PauseToken.cs" />
+    <Compile Include="AsyncEx\ProducerProgress.cs" />
+    <Compile Include="AsyncEx\PropertyProgress.cs" />
+    <Compile Include="AsyncEx\SynchronizationContextHelpers.cs" />
+    <Compile Include="AsyncEx\Synchronous\TaskExtensions.cs" />
+    <Compile Include="AsyncEx\TaskCompletionSource.cs" />
+    <Compile Include="AsyncEx\TaskCompletionSourceExtensions.cs" />
+    <Compile Include="AsyncEx\TaskConstants.cs" />
+    <Compile Include="AsyncEx\TaskExtensions.cs" />
+    <Compile Include="AsyncEx\TaskFactoryExtensions.cs" />
+    <Compile Include="AsyncEvent.cs" />
+    <Compile Include="Coroutine.cs" />
+    <Compile Include="CoroutineFunc.cs" />
+    <Compile Include="TaskProducer.cs" />
+    <Compile Include="ITask.cs" />
+    <Compile Include="ITaskProducer.cs" />
+    <Compile Include="ILogic.cs" />
+    <Compile Include="ILogicFrom.cs" />
+    <Compile Include="Logic.cs" />
+    <Compile Include="LogicFunc.cs" />
+    <Compile Include="LogicFrom.cs" />
+    <Compile Include="LogicFuncFrom.cs" />
+    <Compile Include="ChildrenCompletionOptions.cs" />
+    <Compile Include="LogicStatuedFunc.cs" />
+    <Compile Include="LoopContinuationType.cs" />
+    <Compile Include="ParallelTaskScheduler.cs" />
+    <Compile Include="QueuedTaskScheduler.cs" />
+    <Compile Include="BlacklistItem.cs" />
+    <Compile Include="BlacklistType.cs" />
+    <Compile Include="ChangeLog.cs" />
+    <Compile Include="Definition.cs" />
+    <Compile Include="InternalBlacklist.cs" />
+    <Compile Include="LogicStatued.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\RelayCommand.cs" />
+    <Compile Include="CoroutineStatus.cs" />
+    <Compile Include="RunStats.cs" />
+    <Compile Include="IContainer.cs" />
+    <Compile Include="VersionDated.cs" />
+    <Compile Include="Xml\Serialization\Advanced\BinaryPropertyDeserializer.cs" />
+    <Compile Include="Xml\Serialization\Advanced\BinaryPropertySerializer.cs" />
+    <Compile Include="Xml\Serialization\Advanced\Binary\IBinaryReader.cs" />
+    <Compile Include="Xml\Serialization\Advanced\Binary\IBinaryWriter.cs" />
+    <Compile Include="Xml\Serialization\Advanced\BurstBinaryReader.cs" />
+    <Compile Include="Xml\Serialization\Advanced\BurstBinaryWriter.cs" />
+    <Compile Include="Xml\Serialization\Advanced\DefaultXmlReader.cs" />
+    <Compile Include="Xml\Serialization\Advanced\DefaultXmlWriter.cs" />
+    <Compile Include="Xml\Serialization\Advanced\Deserializing\IPropertyDeserializer.cs" />
+    <Compile Include="Xml\Serialization\Advanced\PropertyCache.cs" />
+    <Compile Include="Xml\Serialization\Advanced\PropertyProvider.cs" />
+    <Compile Include="Xml\Serialization\Advanced\Serializing\IPropertySerializer.cs" />
+    <Compile Include="Xml\Serialization\Advanced\Serializing\ITypeNameConverter.cs" />
+    <Compile Include="Xml\Serialization\Advanced\Serializing\PropertySerializer.cs" />
+    <Compile Include="Xml\Serialization\Advanced\SimpleValueConverter.cs" />
+    <Compile Include="Xml\Serialization\Advanced\SizeOptimizedBinaryReader.cs" />
+    <Compile Include="Xml\Serialization\Advanced\SizeOptimizedBinaryWriter.cs" />
+    <Compile Include="Xml\Serialization\Advanced\TypeNameConverter.cs" />
+    <Compile Include="Xml\Serialization\Advanced\XmlPropertyDeserializer.cs" />
+    <Compile Include="Xml\Serialization\Advanced\XmlPropertySerializer.cs" />
+    <Compile Include="Xml\Serialization\Advanced\Xml\ISimpleValueConverter.cs" />
+    <Compile Include="Xml\Serialization\Advanced\Xml\IXmlReader.cs" />
+    <Compile Include="Xml\Serialization\Advanced\Xml\IXmlWriter.cs" />
+    <Compile Include="Xml\Serialization\BinarySerializationMode.cs" />
+    <Compile Include="Xml\Serialization\Core\ArrayAnalyzer.cs" />
+    <Compile Include="Xml\Serialization\Core\Binary\BinaryReaderTools.cs" />
+    <Compile Include="Xml\Serialization\Core\Binary\BinaryWriterTools.cs" />
+    <Compile Include="Xml\Serialization\Core\Binary\Elements.cs" />
+    <Compile Include="Xml\Serialization\Core\Binary\IndexGenerator.cs" />
+    <Compile Include="Xml\Serialization\Core\CreatingInstanceException.cs" />
+    <Compile Include="Xml\Serialization\Core\DefaultInitializer.cs" />
+    <Compile Include="Xml\Serialization\Core\DeserializingException.cs" />
+    <Compile Include="Xml\Serialization\Core\Property.cs" />
+    <Compile Include="Xml\Serialization\Core\SharpSerializerSettings.cs" />
+    <Compile Include="Xml\Serialization\Core\SimpleValueParsingException.cs" />
+    <Compile Include="Xml\Serialization\Core\Tools.cs" />
+    <Compile Include="Xml\Serialization\Core\Xml\Elements.cs" />
+    <Compile Include="Xml\Serialization\DefaultSerializer.cs" />
+    <Compile Include="Xml\Serialization\Deserializing\ObjectFactory.cs" />
+    <Compile Include="Xml\Serialization\ExcludeFromSerializationAttribute.cs" />
+    <Compile Include="Xml\Serialization\Serializing\PropertyFactory.cs" />
+    <Compile Include="Xml\Serialization\Serializing\PropertyTypeInfo.cs" />
+    <Compile Include="Xml\Serialization\Serializing\TypeInfo.cs" />
+    <Compile Include="Xml\Serialization\Serializing\TypeInfoCollection.cs" />
+    <Compile Include="Xml\Serialization\SharpSerializer.cs" />
+    <Compile Include="Xml\Serialization\SharpSerializerBinarySettings.cs" />
+    <Compile Include="Xml\Serialization\SharpSerializerXmlSettings.cs" />
+    <Compile Include="Xml\XmlSetting.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Olan.sln" />
+    <Content Include="Olan.sln.DotSettings.user" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Olan.csproj.DotSettings" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\OlanDemo\packages\PostSharp.4.1.27\tools\PostSharp.targets" Condition="Exists('..\OlanDemo\packages\PostSharp.4.1.27\tools\PostSharp.targets')" />
+  <Target Name="EnsurePostSharpImported" BeforeTargets="BeforeBuild" Condition="'$(PostSharp30Imported)' == ''">
+    <Error Condition="!Exists('..\OlanDemo\packages\PostSharp.4.1.27\tools\PostSharp.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://www.postsharp.net/links/nuget-restore." />
+    <Error Condition="Exists('..\OlanDemo\packages\PostSharp.4.1.27\tools\PostSharp.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://www.postsharp.net/links/nuget-restore." />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
