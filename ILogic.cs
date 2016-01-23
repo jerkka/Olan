@@ -1,21 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Threading.Tasks;
 
-namespace Olan {
-    public interface ILogic<TKey, TChild> : ITask, IDictionary<TKey, TChild>
-        where TChild : ITask {
-        #region Properties
+//namespace Olan {
+//    public interface ILogic<TKey, TChild> : ITask, IDictionary<TKey, TChild>
+//        where TChild : ITask {
+//        #region Properties
 
-        ChildrenCompletionOptions ExecutionOptions { get; }
-        Func<TKey, TKey> Stater { get; set; }
-        List<Task> Tasks { get; }
+//        ChildrenCompletionOptions ExecutionOptions { get; }
+//        Func<TKey, TKey> Stater { get; set; }
+//        List<Task> Tasks { get; }
 
-        #endregion
-        #region Methods
+//        #endregion
+//        #region Methods
 
-        Task ExecuteChild(TKey child, params object[] args);
+//        Task ExecuteChild(TKey child, params object[] args);
 
-        #endregion
-    }
-}
+//        #endregion
+//    }
+//}

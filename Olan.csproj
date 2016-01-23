@@ -68,6 +68,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Prod\AsyncAction.cs" />
+    <Compile Include="Prod\AsyncActionBase.cs" />
+    <Compile Include="Prod\AsyncFunc.cs" />
+    <Compile Include="Prod\AsyncFuncBase.cs" />
+    <Compile Include="Prod\AsyncQueueAction.cs" />
+    <Compile Include="Prod\AsyncQueueActionBase.cs" />
+    <Compile Include="Prod\AsyncQueueFuncBase.cs" />
+    <Compile Include="Prod\ITaskQueue.cs" />
+    <Compile Include="Prod\ITaskQueueProducer.cs" />
+    <Compile Include="Prod\TaskProducer.cs" />
+    <Compile Include="Prod\TaskQueueProducer.cs" />
     <Compile Include="UI\FlagsEnumValueConverter.cs" />
     <Compile Include="UI\ConfigurablePropertyAttribute.cs" />
     <Compile Include="JsonExtensions.cs" />
@@ -125,7 +136,6 @@
     <Compile Include="AsyncEvent.cs" />
     <Compile Include="Coroutine.cs" />
     <Compile Include="CoroutineFunc.cs" />
-    <Compile Include="TaskProducer.cs" />
     <Compile Include="ITask.cs" />
     <Compile Include="ITaskProducer.cs" />
     <Compile Include="ILogic.cs" />
